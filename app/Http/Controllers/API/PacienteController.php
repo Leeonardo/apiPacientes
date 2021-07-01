@@ -29,10 +29,10 @@ class PacienteController extends Controller
     public function store(GuardarPacienteRequest $request)
     {
         Paciente::create($request->all());
-        return response()->json(
-            'res'=>true,
-            'msg'=>'Paciente Guardado Correctamente'
-        )
+        return response()->json([
+            'res' => true,
+            'msg' => 'Paciente Guardado Correctamente'
+            ]);
     }
 
     /**
